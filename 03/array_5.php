@@ -12,9 +12,7 @@ $life = [
     ]
 ];
 
-// 以下のXXXXXを修正
 $study = "{$life['study']['国語'][1]}、{$life['study']['理科'][0]}、{$life['study']['社会'][0]}";
-//.[study][1][0].[study][2][0]
 
 $club = "{$life['club']['運動部'][2]}、{$life['club']['文化部'][0]}";
 
