@@ -1,15 +1,15 @@
 <?php
 
 $msg = '';
-$msg_all = '';
+$age = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $msg = $_POST['message'];
+    $msg = $_POST['age'];
 }
 
 if (empty($msg)) {
 } else {
-    $msg_all = '私は' . htmlspecialchars($msg, ENT_QUOTES, 'UTF-8') . '歳です。';
+    $msg = '私は' . htmlspecialchars($msg, ENT_QUOTES, 'UTF-8') . '歳です。';
 }
 ?>
 
@@ -28,14 +28,14 @@ if (empty($msg)) {
     <form action="" method="POST">
         <div>
             <label for="">年齢</label><br>
-            <input type="number" name="message">
+            <input type="number" name="age">
         </div>
         <div>
             <input type="submit" value="送信">
         </div>
     </form>
     <div>
-        <?= $msg_all ?>
+        <?= $msg ?>
     </div>
 </body>
 
