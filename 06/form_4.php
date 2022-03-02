@@ -25,4 +25,3 @@ switch ($_GET['operator']) {
         echo '正しい演算子を指定して下さい';
         break;
 }
-echo $_GET['num1'] . $a . $_GET['num2'] . '=' . $result;
