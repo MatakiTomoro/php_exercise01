@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     if (empty($err_msg)) {
-        header('Location: judge_ment.php?=' . $msg);
+        header('Location: judge_ment.php?msg=' . $msg);
         exit;
     }
 }
