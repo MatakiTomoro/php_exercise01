@@ -24,7 +24,7 @@ foreach ($subjects as $subject) {
             $b = '中止';
             break;
 
-        
+
     }
     echo $subject . 'の試験は' . $b . 'です。' . '<br>';
 }
