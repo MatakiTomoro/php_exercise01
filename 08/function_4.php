@@ -12,8 +12,8 @@ function check_temperature($body_temperature)
 function create_message($body_temperature)
 {
     check_temperature($body_temperature);
-    
-    if ($body_temperature < 37) {
+
+    if (check_temperature($body_temperature) === "true") {
         return "あなたは平熱なので、問題なく参加できます";
     } else {
         return "あなたは発熱しているので、参加できません";
@@ -39,13 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <?php if ($msg) : ?>
+    <?php if (!empty($msg)) : ?>
         <h1><?= $msg ?></h1>
     <?php endif; ?>
-
     <h2>体温を入力してください</h2>
-    <form action="" method="POST">
-        <input type="number" name="body_temperature">
+    <form action="" method="post">
+        <input type="number" step="0.1" name="body_temperature" required>
         <input type="submit" value="送信">
     </form>
 </body>

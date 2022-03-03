@@ -9,7 +9,7 @@ function get_greeting($time_zone)
         '昼' => 'こんにちは',
         '夜' => 'こんばんは'
     ];
-    echo $time_zone . 'の挨拶は' . $greetings[$time_zone];
+    return $time_zone . 'の挨拶は' . $greetings[$time_zone];
 }
 
-get_greeting($time_zone);
+echo get_greeting($time_zone);
